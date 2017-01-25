@@ -6,7 +6,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babelify": "^7.3.0",
     "browserify": "^13.3.0",
-    "elix": "JanMiksovsky/elix#single-selection"
+    "elix": "git://github.com/JanMiksovsky/elix.git#list-box"
   },
   "scripts": {
     "build": "node node_modules/browserify/bin/cmd.js --debug --transform [babelify] src/*.js --outfile dist/demos.js"

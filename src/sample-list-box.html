@@ -1,0 +1,39 @@
+<dom-module id="sample-list-box">
+  <template>
+
+    <style>
+    :host {
+      border: 1px solid gray;
+      box-sizing: border-box;
+      cursor: default;
+      display: flex;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    #itemsContainer {
+      flex: 1;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll; /* for momentum scrolling */
+    }
+
+    #itemsContainer ::slotted(*) {
+      cursor: default;
+      padding: 0.25em;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    #itemsContainer ::slotted(.selected) {
+      background: var(--elix-selected-background, highlight);
+      color: var(--elix-selected-color, highlighttext);
+    }
+    </style>
+
+    <div id="itemsContainer" role="none">
+      <slot></slot>
+    </div>
+
+  </template>
+</dom-module>
