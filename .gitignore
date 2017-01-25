@@ -1,2 +1,3 @@
-/bower_components/
+# Don't check in node_modules, but *do* check in bower_components, which are
+# needed to run demos on GitHub Pages.
 /node_modules/
