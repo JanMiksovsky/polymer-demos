@@ -5,7 +5,8 @@
  * See that demo for more details about how the mixins work together.
  *
  * This example defines the list box template in an HTML Import, which is
- * standard practice for Polymer elements.
+ * standard practice for Polymer elements. For the time being, this script is
+ * maintained outside of that HTML file to simplify transpilation.
  */
 
 
@@ -16,7 +17,7 @@ import symbols from 'elix/elements/elix-mixins/src/symbols';
 
 
 // Apply a set of Elix mixins to the Polymer.Element base class.
-// Use `reduce` to apply the functions in order.
+// Use `reduce` to apply all the mixin functions.
 const mixins = [
   ClickSelectionMixin,
   SelectionAriaMixin,
