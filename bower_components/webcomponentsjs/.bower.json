@@ -12,26 +12,24 @@
   "keywords": [
     "webcomponents"
   ],
-  "dependencies": {
+  "license": "BSD",
+  "ignore": [],
+  "devDependencies": {
+    "web-component-tester": "^5",
     "custom-elements": "webcomponents/custom-elements#master",
     "es6-promise": "stefanpenner/es6-promise#^4.0.0",
-    "html-imports": "webcomponents/html-imports#v0",
+    "html-imports": "webcomponents/html-imports#master",
     "shadydom": "webcomponents/shadydom#master",
     "shadycss": "webcomponents/shadycss#master",
     "template": "webcomponents/template#master",
     "URL": "webcomponents/URL#master",
     "webcomponents-platform": "webcomponents/webcomponents-platform#master"
   },
-  "license": "BSD",
-  "ignore": [],
-  "devDependencies": {
-    "web-component-tester": "^4.0.1"
-  },
-  "_release": "5c3e6bb4f3",
+  "_release": "f214a22d17",
   "_resolution": {
     "type": "branch",
     "branch": "v1",
-    "commit": "5c3e6bb4f3391c4dc78a6146418a37cd42a77d70"
+    "commit": "f214a22d171d618285c2245ace8c7eb6438c81f7"
   },
   "_source": "https://github.com/Polymer/webcomponentsjs.git",
   "_target": "v1",

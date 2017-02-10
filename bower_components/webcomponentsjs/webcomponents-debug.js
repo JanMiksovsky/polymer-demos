@@ -10,13 +10,11 @@
 
 (function() {
 
-  'use strict';
-
   // Establish scope.
   window.WebComponents = window.WebComponents || {flags:{}};
 
   // loading script
-  var file = 'webcomponents-lite.js';
+  var file = 'webcomponents-debug.js';
   var script = document.querySelector('script[src*="' + file + '"]');
 
   // Flags. Convert url arguments to flags
@@ -50,18 +48,29 @@
     }
   }
 
+  // construct full dependency list
+  var modules = [
+    '../../webcomponents-platform/webcomponents-platform.js',
+    '../../URL/url.js',
+    '../../template/template.js',
+    '../../es6-promise/dist/es6-promise.auto.min.js',
+    '../../html-imports/src/html-imports.js',
+    'pre-polyfill.js',
+    '../../shadydom/shadydom.min.js',
+    '../../custom-elements/custom-elements.min.js',
+    '../../shadycss/shadycss.min.js',
+    'post-polyfill.js',
+    'unresolved.js'
+  ];
+
+  var src = script.getAttribute('src');
+  var path = src.slice(0, src.lastIndexOf(file));
+
+  modules.forEach(function(f) {
+    document.write('<script src="' + path + 'src/' + f + '"></script>');
+  });
+
   // exports
   WebComponents.flags = flags;
-  var scope = window.WebComponents;
-  var forceShady = scope.flags.shadydom;
-  if (forceShady) {
-    window.ShadyDOM = window.ShadyDOM || {};
-    ShadyDOM.force = forceShady;
-  }
-
-  var forceCE = scope.flags.register || scope.flags.ce;
-  if (forceCE && window.customElements) {
-    customElements.forcePolyfill = forceCE;
-  }
 
 })();
