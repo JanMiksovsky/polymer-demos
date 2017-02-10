@@ -9,6 +9,6 @@
     "elix": "git://github.com/JanMiksovsky/elix.git#list-box"
   },
   "scripts": {
-    "build": "node node_modules/browserify/bin/cmd.js --debug --transform [babelify] src/*.js --outfile dist/demos.js"
+    "build": "browserify --debug --transform [babelify] src/*.js --outfile dist/demos.js"
   }
 }
