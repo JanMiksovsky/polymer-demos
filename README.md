@@ -1,5 +1,7 @@
 This repository contains demos of Elix mixins applied to Polymer elements.
 
+[Polymer list box demo](https://elix.github.io/polymer-demos/demos/listBox.html)
+
 # Install
 
 Since this repo currently uses a branch of the main elix/elix repo, you need to
